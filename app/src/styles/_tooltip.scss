@@ -1,3 +1,8 @@
+/* The popper wrapper is positioned over the page; it must never swallow pointer events meant for the UI below. */
+[data-reka-popper-content-wrapper]:has(> .tooltip) {
+	pointer-events: none;
+}
+
 .tooltip {
 	--tooltip-foreground-color: var(--foreground-inverted);
 	--tooltip-background-color: var(--background-inverted);
